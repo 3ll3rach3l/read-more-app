@@ -12,7 +12,7 @@ const setUser = (user) =>{
 export const login = (name, password) =>{
     return async dispatch => {
         const csrfToken = Cookies.get("XSRF-TOKEN");
-        const res = fetch("/api/session", {
+        const res = await fetch("/api/session", {
             method: "put",
             headers: {
                 "Content-Type": "application/json",
@@ -21,9 +21,21 @@ export const login = (name, password) =>{
             body: JSON.stringify({name, password})
         });
         res.data = await res.json(); 
-        if(res.ok) dispatch(setUser(res.data)) //will add error handler later
+        if(res.ok) dispatch(setUser(res.data.user)) //will add error handler later
 
         return res;
 
     }
+}
+
+
+
+export default function authReducer(state={}, action){
+    switch (action.type) {
+        case SET_USER:
+            return action.user
+        default:
+            return state;
+    }
+
 }
