@@ -14,6 +14,13 @@ module.exports = (sequelize, DataTypes) => {
           len: [3, 255],
         },
       },
+      name: {
+        allowNull: false,
+        type: Sequelize.STRING,
+        validates: {
+          len: [3, 40],
+        },
+      },
       hashedPassword: {
         allowNull: false,
         type: DataTypes.STRING.BINARY,
@@ -25,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       defaultScope: {
         attributes: {
-          exclude: ["hashedPassword", "email", "createdAt", "updatedAt"],
+          exclude: ["hashedPassword", "email", "updatedAt"],
         },
       },
       scopes: {
@@ -35,26 +42,32 @@ module.exports = (sequelize, DataTypes) => {
         loginUser: {
           attributes: {},
         },
+        createdAt: {
+          attributes: {
+            exclude: ["hashedPassword", "email", "updatedAt"],
+          },
+        },
       },
     }
   );
 
   User.associate = function(models) {
+    //no associations defined bc no other models exist atm
   };
 
   User.prototype.toSafeObject = function() {
     const {
       id,
-      username
+      name
     } = this;
 
-    return { id, username };
+    return { id, name };
   };
 
-  User.login = async function({ username, password }) {
+  User.login = async function({ name, password }) {
     const user = await User.scope('loginUser').findOne({
       where: {
-        [Op.or]: [{ username }, { email: username }],
+        [Op.or]: [{ name }, { email: name }], //may need email to say 'email: username'
       },
     });
     if (user && user.validatePassword(password)) {
@@ -70,10 +83,10 @@ module.exports = (sequelize, DataTypes) => {
     return await User.scope("currentUser").findByPk(id);
   };
 
-  User.signup = async function({ username, email, password }) {
+  User.signup = async function({ name, email, password }) {
     const hashedPassword = bcrypt.hashSync(password);
     const user = await User.create({
-      username,
+      name,
       email,
       hashedPassword
     });
