@@ -11,12 +11,17 @@ const colors = {
 
 const useStyles = makeStyles({
   root: {
+    textTransform: 'none',
+    fontWeight: 'normal',
+    fontSize: '16px',
+    padding: "12px 24px",
+    borderRadius: "3px",
     color: colors.text,
     backgroundColor: colors.background,
     "&:hover": {
-        backgroundColor: colors.backgroundHover
-
-    }
+        backgroundColor: colors.backgroundHover,
+    },
+   
   },
 });
 
@@ -28,7 +33,7 @@ function AuthSubmitButton(props){
         classes={classes}
         type="submit" 
         variant="outlined" 
-        size="large"
+        size="small"
         {...props}
         />
     )
