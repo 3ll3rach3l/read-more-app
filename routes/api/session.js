@@ -6,6 +6,7 @@ const { User } = require("../../db/models");
 const { handleValidationErrors } = require("../util/validation");
 const { requireUser, generateToken, AuthenticationError } = require("../util/auth");
 const { jwtConfig: { expiresIn }} = require('../../config');
+const { noExtendRight } = require("sequelize/types/lib/operators");
 
 const router = express.Router();
 
@@ -44,7 +45,7 @@ router.put(
         user,
       });
     }
-    return next(new Error('Invalid credentials'));
+    return next(new Error("Sorry, that email or password isn't right." ));
   })
 );
 

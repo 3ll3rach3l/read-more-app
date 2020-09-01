@@ -35,12 +35,14 @@ function LoginPage(){
       <Container fixed maxWidth="sm" classes={{ root: classes.container }}>
         {/* <div className="login-form"> */}
         <h1>Sign in to readMore</h1>
-        <div className="error-container"></div>
+        <div className="errors-container">
+          <ul className="errors"></ul>
+        </div>
         <form onSubmit={handleSubmit}>
           <label for="user_email">Email address</label>
           <AuthTextField
-            label="you@yours.com"
-            defaultValue="you@yours.com"
+            
+            placeholder="you@yours.com"
             variant="outlined"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -63,7 +65,7 @@ function LoginPage(){
           </div>
         
         </form>
-        {/* </div> */}
+    
       </Container>
     );
 }

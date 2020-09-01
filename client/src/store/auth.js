@@ -30,8 +30,19 @@ export const login = (name, password) =>{
             body: JSON.stringify({name, password})
         });
         res.data = await res.json(); 
-        if(res.ok) dispatch(setUser(res.data.user)) //will add error handler later
 
+        const {message} = res.data;
+        const errorsList = document.querySelector(".errors");
+        errorsList.innerHTML = '';
+        if(message){
+            const errorLi = document.createElement('li');
+            errorLi.innerHTML = message;
+            errorsList.appendChild(errorLi)
+
+        }
+        if(res.ok) dispatch(setUser(res.data.user)) 
+        
+     
         return res;
 
     }

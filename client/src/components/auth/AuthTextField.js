@@ -6,7 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 const colors = {
   text: "black",
   background: "rgb(244, 241, 234)",
-  labelFocus: "rgb(204, 204, 204)",
+  labelFocus: "rgb(249, 249, 249)",
+  borderFocus: "rgb(204, 204, 204)"
 };
 // border: 1px solid #ccc; rgbToHex(204, 204, 204)
 const useStyles = makeStyles({
@@ -17,11 +18,17 @@ const useStyles = makeStyles({
     },
     "& input": {
       color: colors.text,
-      fontSize: "10px",
+      fontSize: "16px",
     },
-    "& label.Mui-focus":{
-        color: colors.labelFocus
-    }
+    "& input:focus": {
+      color: colors.text,
+      fontSize: "16px",
+      background: colors.labelFocus,
+      border: "1px solid rgb(204, 204, 204)",
+    },
+    "& label.MuiInputBase-root": {
+      color: colors.labelFocus,
+    },
   },
 });
 
