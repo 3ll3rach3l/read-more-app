@@ -18,17 +18,30 @@ function LoginPage(){
     if (isLoggedIn) return <Redirect to="/" />
 
     return (
-      <form onSubmit={handleSubmit}>
-        <label>
-            Email
-            <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} />
-        </label>
-        <label>
+      <div className="login-form">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Email address
+            <input
+              type="text"
+              name="name"
+              placeholder="you@yours.com"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+          <label>
             Password
-            <input type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} />
-        </label>
-        <button type="submit">Sign in</button>
-      </form>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+          <button type="submit">Sign in</button>
+        </form>
+      </div>
     );
 }
 
