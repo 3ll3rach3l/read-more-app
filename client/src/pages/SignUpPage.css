@@ -4,10 +4,16 @@
     width: 60%;
     text-align: center;
     
-
-
 }
 
+.subheading{
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 0;
+    margin: auto;
+    margin-bottom: 25px;
+    width: 100%;
+}
+/* 
 .signup-form-container{
     border: 1px solid #d0d0c8;
     background-color: white;
@@ -17,7 +23,7 @@
     width: 600px;
     margin: 15px;
     text-align: center;
-}
+} */
 
 label{
     font-size: 12px;
@@ -62,4 +68,14 @@ label{
 
 .signIn-option{
     margin-left: 24px;
+}
+
+#privacy-notice{
+    color: #aaa;
+    margin: 32px 0 0 0;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
