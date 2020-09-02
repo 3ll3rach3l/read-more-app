@@ -11,7 +11,7 @@ const {
 
 
 const validateSignup = [
-  check("username", "must be between 5 and 70 characters")
+  check("name", "must be between 5 and 70 characters")
     .isLength({ min: 5, max: 70 }),
   check("email", "must be a valid email")
     .exists()

@@ -1,1 +1,15 @@
 /* TODO Add site wide styles */
+body{
+    background-color: rgb(237, 230, 214)!important;
+}
+
+h1 {
+    padding: 0px 0px 2px 0px;
+    font-size: 20px;
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #382110;
+    line-height: 24px; 
+}
