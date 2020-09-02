@@ -32,6 +32,15 @@ label{
 }
 
 .errors-container {
+   display: flex;
+   justify-content: center;
+}
+
+.errors{
+    /* list-style-type: none;
+    margin: 0px;
+    padding: 0px; */
+    display: none;
     width: 100%;
     background-color: rgb(253, 183, 173);
     border: 1px solid rgb(250, 96, 74);
@@ -41,10 +50,5 @@ label{
     margin: 16px 0;
     padding: 12px;
     text-align: center;
-}
-
-.errors{
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
 }

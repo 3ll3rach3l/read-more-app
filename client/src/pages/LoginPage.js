@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../store/auth'
+import { login, loginDemo } from '../store/auth'
 import { Redirect, Link } from 'react-router-dom';
 import {Container} from "@material-ui/core";
 import {makeStyles } from "@material-ui/core/styles"
 import AuthSubmitButton from '../components/auth/AuthSubmitButton';
+import DemoSubmitButton from '../components/auth/DemoLoginButton'
 import AuthTextField from "../components/auth/AuthTextField";
 import './LoginPage.css'
 
@@ -29,6 +30,12 @@ function LoginPage(){
 
     }
 
+  const handleSubmitDemo = e => {
+    e.preventDefault()
+    dispatch(loginDemo())
+
+  }
+
     if (isLoggedIn) return <Redirect to="/" />
 
     return (
@@ -36,10 +43,10 @@ function LoginPage(){
         {/* <div className="login-form"> */}
         <h1>Sign in to readMore</h1>
         <div className="errors-container">
-          <ul className="errors"></ul>
+          <ul className="errors" id="errors"></ul>
         </div>
         <form onSubmit={handleSubmit}>
-          <label for="user_email">Email address</label>
+          <label htmlFor="user_email">Email address</label>
           <AuthTextField
             
             placeholder="you@yours.com"
@@ -47,7 +54,7 @@ function LoginPage(){
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <label for="user_password">Password</label>
+          <label htmlFor="user_password">Password</label>
           <AuthTextField
             type="password"
             variant="outlined"
@@ -57,8 +64,12 @@ function LoginPage(){
           <div>
           <AuthSubmitButton>Sign in</AuthSubmitButton>
           </div>
+          <div>
+            <DemoSubmitButton onClick={handleSubmitDemo}>Demo Sign in</DemoSubmitButton>
+          </div>
           
           <div className="signUpOption">
+      
             <span>
               Not a member? <Link to="/signup">Sign up</Link>
             </span>

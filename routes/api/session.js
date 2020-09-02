@@ -6,7 +6,7 @@ const { User } = require("../../db/models");
 const { handleValidationErrors } = require("../util/validation");
 const { requireUser, generateToken, AuthenticationError } = require("../util/auth");
 const { jwtConfig: { expiresIn }} = require('../../config');
-const { noExtendRight } = require("sequelize/types/lib/operators");
+//const { noExtendRight } = require("sequelize/types/lib/operators");
 
 const router = express.Router();
 
