@@ -48,7 +48,6 @@ function LoginPage(){
         <form onSubmit={handleSubmit}>
           <label htmlFor="user_email">Email address</label>
           <AuthTextField
-            
             placeholder="you@yours.com"
             variant="outlined"
             value={name}
@@ -69,10 +68,10 @@ function LoginPage(){
           </div>
           
           <div className="signUpOption">
-      
             <span>
               Not a member? <Link to="/signup">Sign up</Link>
             </span>
+      
           </div>
         
         </form>
