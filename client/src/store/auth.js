@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 const SET_USER = 'auth/SET_USER';
 const CREATE_USER = 'auth/CREATE_USER';
-// const REMOVE_USER = 'auth/REMOVE_USER'
+const REMOVE_USER = 'auth/REMOVE_USER'
 
 // ////////////ACTIONS/////////////////////
 export const setUser = (user) =>{
@@ -19,11 +19,11 @@ export const createUser = (user) => {
   }
 }
 
-// export const removeUser = () =>{
-//     return{
-//         type: REMOVE_USER
-//     }
-// }
+export const removeUser = () =>{
+    return{
+        type: REMOVE_USER
+    }
+}
 
 // ////////////////THUNKS/////////////////////////////
 export const login = (name, password) => async (dispatch) => {
@@ -110,14 +110,20 @@ export const signup = (name, email, password) => {
 };
 
 
-// export const logout = () => async (dispatch) => {
-//   const res = await fetch("/api/session", {
-//     method: "delete",
-//   });
-//   if (res.ok) {
-//     dispatch(removeUser());
-//   }
-// };
+export const logout = () => async (dispatch) => {
+  const res = await fetch("/api/session", {
+    method: "delete",
+    headers: { 'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')},
+  });
+  res.data = await res.json();
+  console.log('this is res.data', res.data)
+  if (!res.ok) {
+    console.log("res is not okay in auth.js", res)
+    dispatch(removeUser());
+  }
+
+  return res
+};
 
 
 
@@ -129,8 +135,8 @@ export default function authReducer(state={}, action){
         case CREATE_USER:
           return action.user;    
 
-        // case REMOVE_USER:
-        //     return {};
+        case REMOVE_USER:
+            return {};
 
         default:
             return state;
