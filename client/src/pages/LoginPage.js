@@ -61,10 +61,10 @@ function LoginPage(){
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <div>
+          <div className="signIn-btn"> 
           <AuthSubmitButton>Sign in</AuthSubmitButton>
           </div>
-          <div>
+          <div className="demoSignIn-btn">
             <DemoSubmitButton onClick={handleSubmitDemo}>Demo Sign in</DemoSubmitButton>
           </div>
           
