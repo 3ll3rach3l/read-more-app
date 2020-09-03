@@ -1,3 +1,7 @@
+.login-main{
+    background-color: rgb(237, 230, 214)
+}
+
 form{
     display: flex;
     flex-direction: column;

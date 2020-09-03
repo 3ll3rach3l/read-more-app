@@ -1,9 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { logout } from '../store/auth';
+import { logout } from '../../store/auth';
 import Cookies from 'js-cookie';
-import AuthSubmitButton from '../components/auth/AuthSubmitButton';
-
+import AuthSubmitButton from './AuthSubmitButton'
 
 function LogoutButton() {
     const dispatch = useDispatch();

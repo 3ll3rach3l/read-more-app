@@ -1,3 +1,8 @@
+/* body{
+    background-color: rgb(237, 230, 214)!important
+} */
+
+
 .signup-form{
     display: flex;
     flex-direction: column;
