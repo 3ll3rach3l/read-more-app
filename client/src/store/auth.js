@@ -89,22 +89,25 @@ export const signup = (name, email, password) => {
       body: JSON.stringify({ name, email, password}),
     });
     res.data = await res.json();
+    console.log("res.date on auth.js--------", res.data)
 
-      const { message } = res.data;
+      const { error } = res.data;
       const errorsList = document.getElementById("sign-up-errors");
       errorsList.innerHTML = "";
-      if (message) {
+      if (error) {
         errorsList.style.display = "flex";
-        const errorLi = document.createElement("li");
-        errorLi.innerHTML = message;
-        errorsList.appendChild(errorLi);
+        const errors = error.errors
+        for (let err of errors){
+          const errorLi = document.createElement("li");
+          errorLi.innerHTML = err;
+          errorsList.appendChild(errorLi);
+
+        }
       }
       if (res.ok) {
         dispatch(setUser(res.data.user));
       }
-    if (res.ok) {
-      dispatch(createUser(res.data.user));
-    }
+   
     return res;
   };
 };
@@ -116,13 +119,16 @@ export const logout = () => async (dispatch) => {
     headers: { 'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')},
   });
   res.data = await res.json();
-  console.log('this is res.data', res.data)
-  if (!res.ok) {
-    console.log("res is not okay in auth.js", res)
-    dispatch(removeUser());
-  }
-
+  dispatch(removeUser())
+  console.log("user is removed")
+  //console.log('this is res.data', res.data)
+  // if (!res.ok) {
+  //   console.log("res is not okay in auth.js", res)
+  //   dispatch(removeUser());
+  // }
+  //console.log("this is res in auth.js line 127", res)
   return res
+  
 };
 
 
