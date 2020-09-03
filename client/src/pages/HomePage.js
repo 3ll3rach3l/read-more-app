@@ -14,8 +14,8 @@ function HomePage(){
 
    return(
        <>
-       {/* <SiteHeader></SiteHeader> */}
        <NavBar></NavBar> 
+       <div className="main-content" />
       </>
    )
 
