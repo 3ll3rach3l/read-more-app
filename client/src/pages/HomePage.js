@@ -11,8 +11,10 @@ function HomePage(){
 
    return(
        <>
-        <h1>Welcome Home!</h1>
-        <LogoutButton />
+       <div className="temp-header">
+            <h1>readMore</h1> 
+            <LogoutButton />
+       </div>
        </>  
    )
 
