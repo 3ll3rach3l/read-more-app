@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Redirect } from 'react-router-dom'
 import {useSelector} from 'react-redux';
-import NavBar from './NavBar'
+import NavBar from '../components/sitewide/NavBar'
+import SiteHeader from '../components/sitewide/SiteHeader';
+
 
 function HomePage(){
     const isLoggedIn = useSelector (state => !!state.auth.id);
@@ -11,7 +13,10 @@ function HomePage(){
     if(!isLoggedIn) return <Redirect to='/login'></Redirect>
 
    return(
-     <NavBar></NavBar> 
+       <>
+       <SiteHeader></SiteHeader>
+       <NavBar></NavBar> 
+      </>
    )
 
 }
