@@ -1,7 +1,8 @@
 import Cookies from 'js-cookie';
 
 const SET_USER = 'auth/SET_USER';
-// const REMOVE_USER = 'auth/REMOVE_USER'
+const CREATE_USER = 'auth/CREATE_USER';
+const REMOVE_USER = 'auth/REMOVE_USER'
 
 // ////////////ACTIONS/////////////////////
 export const setUser = (user) =>{
@@ -11,11 +12,18 @@ export const setUser = (user) =>{
     }
 }
 
-// export const removeUser = () =>{
-//     return{
-//         type: REMOVE_USER
-//     }
-// }
+export const createUser = (user) => {
+  return{
+    type: CREATE_USER,
+    user
+  }
+}
+
+export const removeUser = () =>{
+    return{
+        type: REMOVE_USER
+    }
+}
 
 // ////////////////THUNKS/////////////////////////////
 export const login = (name, password) => async (dispatch) => {
@@ -70,30 +78,58 @@ export const loginDemo = () => async (dispatch) => {
   return res;
 };
 
-// export const loadUser = () => {
-//   const authToken = Cookies.get("token");
-//   if (authToken) {
-//     try {
-//       const payload = authToken.split(".")[1];
-//       const decodedPayload = atob(payload);
-//       const payloadObj = JSON.parse(decodedPayload);
-//       const { data } = payloadObj;
-//       return data;
-//     } catch (e) {
-//       Cookies.remove("token");
-//     }
-//   }
-//   return {};
-// };
+export const signup = (name, email, password) => {
+  return async (dispatch) => {
+    const res = await fetch("/api/users", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+        "XSRF-TOKEN": Cookies.get("XSRF-TOKEN"),
+      },
+      body: JSON.stringify({ name, email, password}),
+    });
+    res.data = await res.json();
+    console.log("res.date on auth.js--------", res.data)
 
-// export const logout = () => async (dispatch) => {
-//   const res = await fetch("/api/session", {
-//     method: "delete",
-//   });
-//   if (res.ok) {
-//     dispatch(removeUser());
-//   }
-// };
+      const { error } = res.data;
+      const errorsList = document.getElementById("sign-up-errors");
+      errorsList.innerHTML = "";
+      if (error) {
+        errorsList.style.display = "flex";
+        const errors = error.errors
+        for (let err of errors){
+          const errorLi = document.createElement("li");
+          errorLi.innerHTML = err;
+          errorsList.appendChild(errorLi);
+
+        }
+      }
+      if (res.ok) {
+        dispatch(setUser(res.data.user));
+      }
+   
+    return res;
+  };
+};
+
+
+export const logout = () => async (dispatch) => {
+  const res = await fetch("/api/session", {
+    method: "delete",
+    headers: { 'XSRF-TOKEN': Cookies.get('XSRF-TOKEN')},
+  });
+  res.data = await res.json();
+  dispatch(removeUser())
+  console.log("user is removed")
+  //console.log('this is res.data', res.data)
+  // if (!res.ok) {
+  //   console.log("res is not okay in auth.js", res)
+  //   dispatch(removeUser());
+  // }
+  //console.log("this is res in auth.js line 127", res)
+  return res
+  
+};
 
 
 
@@ -102,8 +138,11 @@ export default function authReducer(state={}, action){
         case SET_USER:
             return action.user;
 
-        // case REMOVE_USER:
-        //     return {};
+        case CREATE_USER:
+          return action.user;    
+
+        case REMOVE_USER:
+            return {};
 
         default:
             return state;

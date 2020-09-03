@@ -8,14 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      email: {
-        allowNull: false,
-        type: Sequelize.STRING(255),
-        unique: true,
-      },
       name: {
         allowNull: false,
         type: Sequelize.STRING(40),
+        unique: true,
+      },
+      email: {
+        allowNull: false,
+        type: Sequelize.STRING(255),
         unique: true,
       },
       hashedPassword: {

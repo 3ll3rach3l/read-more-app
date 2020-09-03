@@ -1,0 +1,81 @@
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    text-align: center;
+    
+}
+
+.subheading{
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 0;
+    margin: auto;
+    margin-bottom: 25px;
+    width: 100%;
+}
+/* 
+.signup-form-container{
+    border: 1px solid #d0d0c8;
+    background-color: white;
+    border-radius: 4px; 
+    box-shadow: 0px 1px 1px #d0d0c8;
+    padding: 28px 10px 34px 10px;
+    width: 600px;
+    margin: 15px;
+    text-align: center;
+} */
+
+label{
+    font-size: 12px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+    width: 100%;
+}
+
+.signUpOption{
+    text-align: center;
+    margin-top: 24px;
+}
+
+.errors-container {
+   display: flex;
+   justify-content: center;
+}
+
+.errors{
+    /* list-style-type: none;
+    margin: 0px;
+    padding: 0px; */
+    display: none;
+    width: 100%;
+    background-color: rgb(253, 183, 173);
+    border: 1px solid rgb(250, 96, 74);
+    border-color: rgb(250, 96, 74);
+    border-radius: 3px;
+    color: #333333;
+    margin: 16px 0;
+    padding: 12px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.signup-btn-container{
+    margin-top: 10px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.signIn-option{
+    margin-left: 24px;
+}
+
+#privacy-notice{
+    color: #aaa;
+    margin: 32px 0 0 0;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}

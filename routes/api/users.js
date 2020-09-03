@@ -12,6 +12,7 @@ const {
 
 const validateSignup = [
   check("name", "must be between 5 and 70 characters")
+    .exists()
     .isLength({ min: 5, max: 70 }),
   check("email", "must be a valid email")
     .exists()
@@ -19,8 +20,8 @@ const validateSignup = [
   check("password", "must be 6 or more characters")
     .exists()
     .isLength({ min: 6, max: 70 }),
-  check('confirmPassword', 'must have the same value as the password field')
-    .custom((value, { req }) => value === req.body.password)
+  // check('confirmPassword', 'must have the same value as the password field')
+  //   .custom((value, { req }) => value === req.body.password)
 ];
 
 const router = express.Router();
