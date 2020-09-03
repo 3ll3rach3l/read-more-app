@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     textTransform: "none",
     fontWeight: "normal",
     fontSize: "16px",
-    padding: "12px 24px",
+    padding: "6px 12px",
     borderRadius: "3px",
     color: colors.text,
     backgroundColor: colors.background,

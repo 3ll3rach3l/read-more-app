@@ -3,7 +3,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom'
 import {useSelector} from 'react-redux';
 import NavBar from '../components/sitewide/NavBar'
-import SiteHeader from '../components/sitewide/SiteHeader';
+//import SiteHeader from '../components/sitewide/SiteHeader';
 
 
 function HomePage(){
@@ -14,7 +14,7 @@ function HomePage(){
 
    return(
        <>
-       <SiteHeader></SiteHeader>
+       {/* <SiteHeader></SiteHeader> */}
        <NavBar></NavBar> 
       </>
    )
