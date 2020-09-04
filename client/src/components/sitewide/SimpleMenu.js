@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     fontFamily: "'Lato', 'Helvetica Neue', 'Helvetica', 'sans-serif'",
     color: "rgb(56, 33, 16)",
     fontSize: "16px",
-    padding: "0px 30px",
+    padding: "0px 15px",
     lineHeight: "50px",
   }
 });
