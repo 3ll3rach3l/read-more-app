@@ -15,7 +15,19 @@ function HomePage(){
    return(
        <>
        <NavBar></NavBar> 
-       <div className="main-content" />
+       <main className="homepage-main">
+           <div className="banner-year">
+               <img className="book-img"/>
+               <div className="year">
+                   <span>2020 READING<br/> </span>
+                   <span>CHALLENGE</span>
+               </div>
+           </div>
+           <div className="challengeStatsContainer2">
+
+           </div>
+
+       </main>
       </>
    )
 
