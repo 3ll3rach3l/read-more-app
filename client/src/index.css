@@ -2,7 +2,9 @@
 /* body{
     background-color: rgb(237, 230, 214)!important;
 } */
-
+main{
+    background: white;
+}
 
 h1 {
     padding: 0px 0px 2px 0px;
@@ -14,3 +16,4 @@ h1 {
     color: #382110;
     line-height: 24px; 
 }
+

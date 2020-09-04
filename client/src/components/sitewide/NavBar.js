@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import './NavBar.css'
+import SimpleMenu from './SimpleMenu';
 
 
 const NavBar = () =>{
@@ -22,18 +23,7 @@ const NavBar = () =>{
         </header>
         <nav className="navbar-container">
           <div className="navbar-links">
-            <ul className="menu">
-              <li>
-                <NavLink to="/" className="navbar-link-item">
-                  Home
-                </NavLink>
-              </li>
-                <li>
-                  <NavLink to="/mybooks/all" className="navbar-link-item">
-                    All Books
-                  </NavLink>
-              </li>
-            </ul>
+                <SimpleMenu/>
           </div>
         </nav>
       </>

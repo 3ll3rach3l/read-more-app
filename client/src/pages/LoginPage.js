@@ -39,7 +39,7 @@ function LoginPage(){
     if (isLoggedIn) return <Redirect to="/" />
 
     return (
-      
+     
         <Container fixed maxWidth="sm" classes={{ root: classes.container }}>
           <h1>Sign in to readMore</h1>
           <div className="errors-container">
@@ -76,7 +76,7 @@ function LoginPage(){
             </div>
           </form>
         </Container>
-    
+     
     );
 }
 
