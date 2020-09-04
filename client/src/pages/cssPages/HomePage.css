@@ -1,0 +1,98 @@
+.homepage-main {
+    margin: 0px auto;
+    text-align: left;
+    width: 970px;
+    background: #FFFFFF;
+}
+div{
+    display: block;
+}
+
+.banner{
+    position: relative;
+    width: 948px;
+    height: 128px;
+    margin-bottom: 20px;
+    background: #00635d;
+}
+
+/* .banner-year{
+    height: 128px;
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+} */
+
+.banner .banner-year .book-img {
+    width: 200px;
+    padding-top: 32px;
+    padding-left: 12px;
+    float: left;
+}
+
+.countdown-container{
+    position: absolute;
+    width: 250px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px 10px;
+    top: 10px;
+    right: 10px;
+    /* height: auto; */
+    color: black;
+}
+
+.banner .banner-year .year {
+    padding-top: 10px;
+    padding-left: 20px;
+    line-height: 55px;
+    float: left;
+    width: 350px;
+}
+
+.banner .banner-year {
+    height: 128px;
+    color: #ffffff;
+    font-size: 46px;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+}
+
+.banner .countdown-container {
+    position: absolute;
+    width: 250px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px 10px;
+    top: 10px;
+    right: 10px;
+    /* height: auto; */
+}
+
+img {
+    border: 0;
+}
+
+.banner .banner-year .book-img {
+    width: 200px;
+    padding-top: 32px;
+    padding-left: 12px;
+    float: left;
+}
+
+/* .year {
+    padding: 10px 0 0 20px;
+    line-height: 55px;
+    float: left;
+    width: 370px;
+    height: 110px;
+
+} */
+h2{
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+}

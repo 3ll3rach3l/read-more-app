@@ -1,0 +1,16 @@
+.countdown-clock{
+    display: table;
+    /* border-collapse: separate; */
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+    font-size: 12px;
+    height: 14px;
+    color: #767676;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    text-align: left;
+    padding: 2px 10px;
+    margin-left: 10px;
+    width: 135px;
+    white-space: nowrap;
+}

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './Countdown.css'
 
 
 const Countdown = () => {
@@ -14,16 +15,17 @@ const Countdown = () => {
                 days: Math.floor(difference / (1000 * 60 * 60 * 24)),
                 hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
                 minutes: Math.floor((difference / 1000 / 60) % 60),
-                seconds: Math.floor((difference/ 1000) % 60)
+                //seconds: Math.floor((difference/ 1000) % 60)
             };
         }
         return timeLeft;
     }
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
-    const [year] = useState(new Date().getFullYear());
+   //const [year] = useState(new Date().getFullYear());
 
     useEffect(() =>{
+        
         setTimeout(() =>{
             setTimeLeft(calculateTimeLeft())
         }, 1000)
@@ -33,15 +35,17 @@ const Countdown = () => {
 
     Object.keys(timeLeft).forEach(interval =>{
         if(!timeLeft[interval]) return
-
+      
         timerComponents.push(
-            <span>{timeLeft[interval]}{interval}{" "}</span>
+            <span>{timeLeft[interval]} {interval}{" "}<br/></span>
         )
     });
 
+   
+
     return(
         <div className="countdown-clock">
-            <p>tick tock</p>
+            {/* <h3>Time Left</h3> */}
             {timerComponents.length ? timerComponents : <span>Time's Up!</span>}
         </div>
     )
