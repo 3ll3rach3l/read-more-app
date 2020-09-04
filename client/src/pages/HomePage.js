@@ -3,7 +3,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom'
 import {useSelector} from 'react-redux';
 import NavBar from '../components/sitewide/NavBar'
-//import SiteHeader from '../components/sitewide/SiteHeader';
+import Countdown from '../components/Countdown'
 
 
 function HomePage(){
@@ -14,17 +14,17 @@ function HomePage(){
 
    return(
        <>
-       <NavBar></NavBar> 
+       <NavBar/>
        <main className="homepage-main">
            <div className="banner-year">
-               <img className="book-img"/>
+               <img className="book-img" alt="empty"/>
                <div className="year">
                    <span>2020 READING<br/> </span>
                    <span>CHALLENGE</span>
                </div>
            </div>
-           <div className="challengeStatsContainer2">
-
+           <div className="countdown-container">
+               <Countdown />
            </div>
 
        </main>
