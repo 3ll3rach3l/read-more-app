@@ -3,8 +3,8 @@ import React from 'react';
 import { Redirect } from 'react-router-dom'
 import {useSelector} from 'react-redux';
 import NavBar from '../components/sitewide/NavBar'
-//import SiteHeader from '../components/sitewide/SiteHeader';
-
+import Countdown from '../components/Countdown'
+import './cssPages/HomePage.css'
 
 function HomePage(){
     const isLoggedIn = useSelector (state => !!state.auth.id);
@@ -14,17 +14,25 @@ function HomePage(){
 
    return(
        <>
-       <NavBar></NavBar> 
+       <NavBar/>
        <main className="homepage-main">
-           <div className="banner-year">
-               <img className="book-img"/>
-               <div className="year">
-                   <span>2020 READING<br/> </span>
-                   <span>CHALLENGE</span>
-               </div>
-           </div>
-           <div className="challengeStatsContainer2">
-
+           <div className="banner">
+            <div className="banner-year">
+                       <img className="book-img" 
+                       src="https://s.gr-assets.com/assets/challenges/yearly/img_RCBook-626ef5100b911207af0c4d84f02df03a.svg" 
+                       alt="empty"/>
+                <div className="year">
+                    <span>
+                    2020 READING
+                    <br/>
+                    CHALLENGE
+                    </span>
+                </div>
+            <div className="countdown-container">
+                <h2>Time Remaining:</h2>
+                <Countdown />
+            </div>
+            </div>
            </div>
 
        </main>
