@@ -1,35 +1,10 @@
-.homepage-main {
-  width: 100%;
-    text-align: center;
-    padding-bottom: 25px;
-}
-div{
-    display: block;
-}
-
-.mainContent{
-    margin: 0px auto;
-    text-align: left;
-    width: 970px;
-    background: #FFFFFF;
-}
-
-.mainContent-float{
-    float: left;
-    width: 960px;
-    margin-top: 15px;
-    margin-left: 5px;
-    font-size: 12px;
-    min-height: 400px;
-    background: #FFFFFF;
-}
-/* .banner{
+.banner{
     position: relative;
     width: 948px;
     height: 128px;
     margin-bottom: 20px;
     background: #00635d;
-} */
+}
 
 /* .banner-year{
     height: 128px;
@@ -39,14 +14,14 @@ div{
     font-weight: bold;
 } */
 
-/* .banner .banner-year .book-img {
+.banner .banner-year .book-img {
     width: 200px;
     padding-top: 32px;
     padding-left: 12px;
     float: left;
-} */
+}
 
-/* .countdown-container{
+.countdown-container{
     position: absolute;
     width: 250px;
     z-index: 5;
@@ -56,8 +31,8 @@ div{
     top: 10px;
     right: 10px;
     /* height: auto; */
-    /* color: black; */
-/* } 
+    color: black;
+}
 
 .banner .banner-year .year {
     padding-top: 10px;
@@ -85,9 +60,9 @@ div{
     top: 10px;
     right: 10px;
     /* height: auto; */
-/* } */
+}
 
-/* img {
+img {
     border: 0;
 }
 
@@ -96,7 +71,7 @@ div{
     padding-top: 32px;
     padding-left: 12px;
     float: left;
-} */
+}
 
 /* .year {
     padding: 10px 0 0 20px;
@@ -106,8 +81,8 @@ div{
     height: 110px;
 
 } */
-/* h2{
+h2{
     font-size: 16px;
     padding: 0px;
     margin: 0px;
-} */
+}
