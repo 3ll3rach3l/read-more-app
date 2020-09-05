@@ -6,6 +6,7 @@ import SignUpPage from './SignUpPage';
 import HomePage from './HomePage';
 import AllBooks from './AllBooks';
 import history from '../store/history'
+import ReadingChallenge from './ReadingChallenge';
 
 export default function Pages(){
     return(
@@ -15,6 +16,7 @@ export default function Pages(){
                 <Route path="/login" component={LoginPage} />
                 <Route path="/signup" component={SignUpPage} />
                 <Route exact path="/" component={HomePage} />
+                <Route path="/challenge" component={ReadingChallenge} />
             </Switch>
         </Router>
     )

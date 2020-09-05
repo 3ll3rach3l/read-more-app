@@ -32,7 +32,7 @@ function SignUpPage() {
 
 
 
-  if (isLoggedIn) return <Redirect to="/" />;
+  if (isLoggedIn) return <Redirect to="/challenge" />;
 
   return (
     <Container fixed maxWidth="sm" classes={{ root: classes.container }}>
