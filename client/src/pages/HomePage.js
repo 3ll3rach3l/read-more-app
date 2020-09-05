@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import NavBar from '../components/sitewide/NavBar'
 import Countdown from '../components/Countdown'
 import './cssPages/HomePage.css'
-import StatusBar from '../components/auth/StatusBar';
+import LeftContainer from '../containers/LeftContainer';
 
 function HomePage(){
     const isLoggedIn = useSelector (state => !!state.auth.id);
@@ -38,7 +38,7 @@ function HomePage(){
                          </div>
                      </div>
                      <div className="challenge2020">
-                         <StatusBar/>
+                         <LeftContainer/>
                      </div>
                      <div className="rightContainer"></div>
                 </div>

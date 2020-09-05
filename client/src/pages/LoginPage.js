@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login, loginDemo } from '../store/auth'
+import { login, loginDemo } from '../store/actions/auth';
 import { Redirect, Link } from 'react-router-dom';
 import {Container} from "@material-ui/core";
 import {makeStyles } from "@material-ui/core/styles"

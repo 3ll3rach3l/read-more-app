@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const StatusBar = () =>{
+const LeftContainer = () =>{
 
 return(
     <div className="leftContainer">
@@ -14,8 +14,12 @@ return(
                     <div className="challengeProgress">
                         <div className="challengeProgressBarProfile">
                            <div className="challengeProgressBarHeader">
-                               
-                            </div> 
+                               <span className="challengeProgressMessage">
+                                   YOU HAVE READ X OF X BOOKS. <br/>
+                                   MAKE SURE TO ADD EDIT FEATURE HERE!
+                               </span>
+                            </div>
+                            <div className="challengeProgressBar"></div> 
                         </div>
 
                     </div>
@@ -31,4 +35,4 @@ return(
 }
 
 
-export default StatusBar;
+export default LeftContainer;

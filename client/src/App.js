@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { CssBaseline } from '@material-ui/core';
 
 import Pages from './pages/Pages';
-import {setUser} from './store/auth'
+import {setUser} from './store/actions/auth'
 
 
 
