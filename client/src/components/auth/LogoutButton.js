@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { logout } from '../../store/auth';
+import { logout } from '../../store/actions/auth';
 import Cookies from 'js-cookie';
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";

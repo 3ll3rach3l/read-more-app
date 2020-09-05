@@ -1,8 +1,8 @@
 import Cookies from 'js-cookie';
 
-const SET_USER = 'auth/SET_USER';
-const CREATE_USER = 'auth/CREATE_USER';
-const REMOVE_USER = 'auth/REMOVE_USER'
+export const SET_USER = 'auth/SET_USER';
+export const CREATE_USER = 'auth/CREATE_USER';
+export const REMOVE_USER = 'auth/REMOVE_USER'
 
 // ////////////ACTIONS/////////////////////
 export const setUser = (user) =>{
@@ -130,22 +130,3 @@ export const logout = () => async (dispatch) => {
   return res
   
 };
-
-
-
-export default function authReducer(state={}, action){
-    switch (action.type) {
-        case SET_USER:
-            return action.user;
-
-        case CREATE_USER:
-          return action.user;    
-
-        case REMOVE_USER:
-            return {};
-
-        default:
-            return state;
-    }
-
-}

@@ -1,11 +1,27 @@
 .homepage-main {
+  width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
+div{
+    display: block;
+}
+
+.mainContent{
     margin: 0px auto;
     text-align: left;
     width: 970px;
     background: #FFFFFF;
 }
-div{
-    display: block;
+
+.mainContent-float{
+    float: left;
+    width: 960px;
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 12px;
+    min-height: 400px;
+    background: #FFFFFF;
 }
 
 .banner{
