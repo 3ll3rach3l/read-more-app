@@ -22,7 +22,7 @@ function HomePage(){
                <div className="mainContent-float">
                    <Banner></Banner>
                      <div className="challenge2020">
-                         <LeftContainer/>
+                         <div className="leftContainer"></div>
                      </div>
                      <div className="rightContainer"></div>
                 </div>

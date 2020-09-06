@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import ChallengeButton from '../components/ChallengeButton';
 import ChallengeLogo from '../components/ChallengeLogo';
 import './cssPages/ReadingChallenge.css'
+import history from '../store/history';
 
 
 const ReadingChallenge = () =>{
@@ -14,6 +15,13 @@ const ReadingChallenge = () =>{
         e.preventDefault();
         dispatch(setGoal(goal))
     }
+
+    const handleClick = e =>{
+        history.push('/')
+
+    }
+
+    
 
     return(
         <>
@@ -45,7 +53,7 @@ const ReadingChallenge = () =>{
                             </td>
                             <td className="smallHbreak"></td>
                             <td className="readingChallengeForm">
-                                <form className="challengeForm">
+                                <form className="challengeForm" onSubmit={handleSubmit}>
                                     <div className="goalSetting">
                                         <div className="errors-container">
                                             <ul className="errors" id="sign-up-errors"></ul>
@@ -59,7 +67,7 @@ const ReadingChallenge = () =>{
                                         placeholder="#"/>
                                         books in 2020.
                                     </div>
-                                    <ChallengeButton>Take the Challenge</ChallengeButton>
+                                    <ChallengeButton onClick={handleClick}>Take the Challenge</ChallengeButton>
                                 </form>
                             </td>
                             <td className="smallHBreak"></td>
