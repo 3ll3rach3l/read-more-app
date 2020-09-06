@@ -1,10 +1,6 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
-//import { loginDemo } from '../store/'
-//import {useDispatch} from 'react-redux';
-
-//const dispatch = useDispatch()
 
 //hook
 const colors = {
@@ -20,6 +16,12 @@ const useStyles = makeStyles({
         fontSize: '16px',
         padding: "12 24",
         borderRadius: "3px",
+        display: "block",
+        marginBlockStart: "1em",
+        marginBlockEnd: "1em",
+        marginInline: "0px",
+        lineHeight: "18px",
+        margin: "18px 0",
         color: colors.text,
         backgroundColor: colors.background,
         "&:hover": {
@@ -29,21 +31,13 @@ const useStyles = makeStyles({
     },
 });
 
-// const handleSubmitDemo = e => {
-    
-//     e.preventDefault()
-//     dispatch(loginDemo())
 
-// }
-
-
-function DemoSubmitButton(props) {
+function ChallengeButton(props) {
     const classes = useStyles();
     return (
         <Button
-            //onClick={handleSubmitDemo}
             classes={classes}
-            type="click"
+            type="submit"
             variant="outlined"
             size="small"
             {...props}
@@ -51,4 +45,4 @@ function DemoSubmitButton(props) {
     )
 }
 
-export default DemoSubmitButton
+export default ChallengeButton;

@@ -1,0 +1,116 @@
+
+.goalContent{
+    background: white;
+    text-align: center;
+    margin: 0px auto;
+    width: 970px;
+}
+
+.pageTitle{
+    font-size: 24px;
+    color: #382110;
+    padding: 10px;
+
+}
+
+.mediumText{
+    font-size: 14px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 18px;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+.readingChallengeSignup {
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    margin: 18px auto;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 18px; 
+}
+
+body, ol, ul, td, th {
+    font-size: 12px;
+    margin: 0;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 18px; 
+    padding: 0;
+
+    
+}
+
+.smallHBreak {
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.readingChallengeSignup .readingChallengeForm .goalSetting {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.smallVBreak {
+    padding: 0.5em 0em 0.5em 0em;
+}
+
+.readingChallengeSignup .inputNumber {
+    -moz-box-shadow: inset 0 0 5px 1px rgba(170,170,170,0.4);
+    -webkit-box-shadow: inset 0 0 5px 1px rgba(170,170,170,0.4);
+    box-shadow: inset 0 0 5px 1px rgba(170,170,170,0.4);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 2.5em;
+    height: 2em;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.goalSetting{
+    display: block;
+    
+}
+
+
+
+/* td{
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 18px; 
+    display: table-cell;
+    vertical-align: inherit;
+} */
+
