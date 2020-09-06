@@ -1,0 +1,45 @@
+.readingChallengeBadge{
+    padding: 1em;
+    text-align: center;
+    width: 130px;
+    float: left;
+}
+
+.readingChallengeBadge .badgeYear .yearHeader {
+    font-size: 40px;
+}
+
+.challengeText--reading{
+    font-size: 21px;
+}
+
+.readingChallengeBadge .badgeYear {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: bold;
+    padding-top: 14px;
+    padding-bottom: 7px;
+    position: relative;
+}
+
+.badgeYear{
+    background-color: #00635d; 
+}
+
+
+.readingChallengeBadge .badgeYear .bookImg {
+    width: 96px;
+    padding: 8px 4px 4px 4px;
+    font-size: 40px;
+}
+
+.bookImg {
+    border: 0;
+}
+
+div{
+    display: block;
+}
+
+
