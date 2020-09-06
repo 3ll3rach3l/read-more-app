@@ -23,6 +23,13 @@ div{
     min-height: 400px;
     background: #FFFFFF;
 }
+
+.leftContainer {
+    float: left;
+    width: 625px;
+    padding-right: 10px;
+    padding-left: 8px;
+}
 /* .banner{
     position: relative;
     width: 948px;

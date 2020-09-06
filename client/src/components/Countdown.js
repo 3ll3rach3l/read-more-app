@@ -26,16 +26,17 @@ const Countdown = () => {
 
     useEffect(() =>{
         
-        setTimeout(() =>{
+        const timer = setTimeout(() =>{
             setTimeLeft(calculateTimeLeft())
-        }, 1000)
-    });
+        }, 1000);
+        return () => clearTimeout(timer)
+    }, []);
 
     const timerComponents = [];
 
-    Object.keys(timeLeft).forEach(interval =>{
+   Object.keys(timeLeft).forEach(interval =>{
         if(!timeLeft[interval]) return
-      
+     
         timerComponents.push(
             <span>{timeLeft[interval]} {interval}{" "}<br/></span>
         )
@@ -45,7 +46,6 @@ const Countdown = () => {
 
     return(
         <div className="countdown-clock">
-            {/* <h3>Time Left</h3> */}
             {timerComponents.length ? timerComponents : <span>Time's Up!</span>}
         </div>
     )

@@ -1,0 +1,20 @@
+.readingChallengeDashboard {
+    position: relative;
+    display: block;
+    color: black;
+    width: 610px;
+    border-radius: 3px;
+    border: 1px solid #D8D8D8;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+}
+
+.readingChallengeDashboard .challengeBanner {
+    border-radius: 19px;
+}
+
+.readingChallengeDashboard .challengeProgressBarProfile {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 16px;
+    margin-left: 100px;
+}
