@@ -18,15 +18,20 @@ module.exports = (sequelize, DataTypes) => {
           }
         }
       },
-    
       userId: {
         allowNull: false,
         type: DataTypes.INTEGER
+    },
+       bookshelfId: {
+         allowNull: false,
+         type: DataTypes.INTEGER,
+         
+       },
 
-    }
   }, {});
   Challenge.associate = function(models) {
     Challenge.belongsTo(models.User, {foreignKey: 'userId'})
+    Challenge.hasMany(models.Bookshelf, {foreignKey: 'bookshelfId'})
   };
   return Challenge;
 };

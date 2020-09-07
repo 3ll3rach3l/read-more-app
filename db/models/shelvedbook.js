@@ -6,7 +6,10 @@ module.exports = (sequelize, DataTypes) => {
     bookshelfId: DataTypes.INTEGER
   }, {});
   ShelvedBook.associate = function(models) {
-    // associations can be defined here
+   ShelvedBook.hasMany(models.Challenge, {foreignKey: 'shelvedBooksId'})
+   //ShelvedBook.hasMany(models.User, {foreignKey: 'userId'})
+   ShelvedBook.hasMany(models.Book, {foreignKey: 'bookId'})
+   ShelvedBook.belongsTo(models.Bookshelf, {foreignKey: 'bookshelfId'})
   };
   return ShelvedBook;
 };

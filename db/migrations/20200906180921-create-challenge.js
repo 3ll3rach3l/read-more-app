@@ -17,6 +17,11 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {model: "Users"}
       },
+      // bookshelfId: {
+      //   allowNull: false,
+      //   type: Sequelize.INTEGER,
+      //   references: { model: "Bookshelves" }
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

@@ -89,7 +89,7 @@ export const signup = (name, email, password) => {
       body: JSON.stringify({ name, email, password}),
     });
     res.data = await res.json();
-    console.log("res.date on auth.js--------", res.data)
+    console.log("res.data on auth.js--------", res.data)
 
       const { error } = res.data;
       const errorsList = document.getElementById("sign-up-errors");
@@ -120,8 +120,8 @@ export const logout = () => async (dispatch) => {
   });
   res.data = await res.json();
   dispatch(removeUser())
-  console.log("user is removed")
-  //console.log('this is res.data', res.data)
+  //console.log("user is removed")
+  console.log('this is logout method', res.data)
   // if (!res.ok) {
   //   console.log("res is not okay in auth.js", res)
   //   dispatch(removeUser());

@@ -4,7 +4,7 @@ import ChallengeButton from '../components/ChallengeButton';
 import ChallengeLogo from '../components/ChallengeLogo';
 import './cssPages/ReadingChallenge.css'
 import history from '../store/history';
-import { addNewGoal } from '../store/actions/challengeActions';
+import { addGoal } from '../store/actions/challengeActions';
 
 
 const ReadingChallenge = () =>{
@@ -14,14 +14,16 @@ const ReadingChallenge = () =>{
 
     const handleSubmit = e =>{
         e.preventDefault();
-        dispatch(addNewGoal(goal))
+        console.log(e.target.value)  //undefined
+        dispatch(addGoal(goal))
         
     }
 
     const handleClick = e =>{
-     
-       history.push('/')
-
+   
+        console.log("this is in clicked", e.target.value) //undefined
+        history.push('/')
+       
     }
 
     

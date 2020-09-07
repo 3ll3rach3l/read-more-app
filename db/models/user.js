@@ -52,7 +52,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   User.associate = function(models) {
-   // User.belongsTo(models.Challenge, {foreignKey: 'userId'})
+   User.hasOne(models.Challenge, {foreignKey: 'userId'})
+   User.hasMany(models.ShelvedBook, {foreighKey: 'userId'})
+   
   };
 
   User.prototype.toSafeObject = function() {
