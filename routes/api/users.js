@@ -9,6 +9,7 @@ const {
   jwtConfig: { expiresIn },
 } = require("../../config");
 
+const router = express.Router();
 
 const validateSignup = [
   check("name", "must be between 5 and 70 characters")
@@ -24,7 +25,6 @@ const validateSignup = [
   //   .custom((value, { req }) => value === req.body.password)
 ];
 
-const router = express.Router();
 
 router.get('/', asyncHandler(async function (_req, res, _next) {
   const users = await User.findAll();

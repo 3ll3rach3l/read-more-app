@@ -6,11 +6,15 @@
 }
 
 form{
-    display: flex;
+    display: block;
     flex-direction: column;
-    width: 60%
+    width: 60%;
+    margin-top: 0em;
 
+}
 
+.MuiOutlinedInput-input {
+    padding: 18.5px 14px;
 }
 
 .MuiContainer-root{
@@ -24,14 +28,14 @@ form{
     text-align: center;
 }
 
-label{
+/* label{
     font-size: 12px;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     color: #333;
     font-weight: bold;
     width: 100%;
-}
+} */
 
 .signUpOption{
     text-align: center;
