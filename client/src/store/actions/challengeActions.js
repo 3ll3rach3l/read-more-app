@@ -28,9 +28,11 @@ export const getGoal = goal =>{
 export const getGoals = (goal) => async (dispatch) =>{
     const res = await fetch('/api/challenge');
     let data = await res.json();
+
     if (res.ok) dispatch(getGoal(data.goal))
 
     return data.goal;
+
 }
 
 export const addGoal = (goal)  => async (dispatch) => {

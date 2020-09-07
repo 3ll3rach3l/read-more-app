@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
 });
   Bookshelf.associate = function(models) {
     Bookshelf.belongsToMany(models.Book, {through: models.ShelvedBook, foreignKey: 'bookshelfId', otherKey: 'bookId'});
+    Bookshelf.hasMany(models.Challenge, {foreignKey: 'bookshelfId'}) //maybe through models.User
+    
    
   };
   return Bookshelf;
