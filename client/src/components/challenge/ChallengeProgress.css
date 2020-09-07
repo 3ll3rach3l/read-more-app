@@ -1,0 +1,52 @@
+.challengeProgress {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    position: relative;
+}
+
+.readingChallengeDashboard .challengeProgressBarProfile {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 16px;
+    margin-left: 100px;
+}
+
+.challengeProgressMessage{
+    color: #00635d;
+}
+
+.graphContainer{
+    position: relative;
+    height: 20px;
+    width: 350px;
+    border: 1px solid #333;
+}
+
+.graphBarFiller{
+    background: #927f64;
+    height: 100%;
+    transition: width .2s ease-in;
+    overflow: hidden;
+}
+
+.secondaryCopy {
+    color: #999999;
+    font-size: 12px;
+}
+
+.challengeProgress .progressStats {
+    line-height: 2;
+    overflow-wrap: normal;
+}
+
+.challengeProgressBar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.readingChallengeDashboard .editChallengeAction {
+    float: right;
+    font-size: 10px;
+    margin-right: 20px;
+}

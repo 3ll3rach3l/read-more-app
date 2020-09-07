@@ -4,6 +4,7 @@ import ChallengeButton from '../components/ChallengeButton';
 import ChallengeLogo from '../components/ChallengeLogo';
 import './cssPages/ReadingChallenge.css'
 import history from '../store/history';
+import { addNewGoal } from '../store/actions/challengeActions';
 
 
 const ReadingChallenge = () =>{
@@ -13,11 +14,13 @@ const ReadingChallenge = () =>{
 
     const handleSubmit = e =>{
         e.preventDefault();
-        dispatch(setGoal(goal))
+        dispatch(addNewGoal(goal))
+        
     }
 
     const handleClick = e =>{
-        history.push('/')
+     
+       history.push('/')
 
     }
 
@@ -56,14 +59,15 @@ const ReadingChallenge = () =>{
                                 <form className="challengeForm" onSubmit={handleSubmit}>
                                     <div className="goalSetting">
                                         <div className="errors-container">
-                                            <ul className="errors" id="sign-up-errors"></ul>
+                                            <ul className="errors" id="goal-errors"></ul>
                                         </div>
                                         <div className="smallVBreak"></div>
                                         I want to read
                                         <input 
                                         className="inputNumber"
                                         type="number"
-                                        name="user_challenge[goal]"
+                                        value={goal}
+                                        onChange={(e) => setGoal(e.target.value)}
                                         placeholder="#"/>
                                         books in 2020.
                                     </div>

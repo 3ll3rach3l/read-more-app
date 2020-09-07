@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   User.associate = function(models) {
-    //no associations defined bc no other models exist atm
+   // User.belongsTo(models.Challenge, {foreignKey: 'userId'})
   };
 
   User.prototype.toSafeObject = function() {

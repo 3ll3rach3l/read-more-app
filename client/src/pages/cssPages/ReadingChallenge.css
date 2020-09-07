@@ -106,11 +106,24 @@ form {
 }
 
 
+.errors-container {
+   display: flex;
+   justify-content: center;
+}
 
-/* td{
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 18px; 
-    display: table-cell;
-    vertical-align: inherit;
-} */
-
+.errors{
+    /* list-style-type: none;
+    margin: 0px;
+    padding: 0px; */
+    display: none;
+    width: 100%;
+    background-color: rgb(253, 183, 173);
+    border: 1px solid rgb(250, 96, 74);
+    border-color: rgb(250, 96, 74);
+    border-radius: 3px;
+    color: #333333;
+    margin: 16px 0;
+    padding: 12px;
+    text-align: center;
+    list-style-type: none;
+}

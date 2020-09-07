@@ -3,10 +3,9 @@ import React from 'react';
 import { Redirect } from 'react-router-dom'
 import {useSelector} from 'react-redux';
 import NavBar from '../components/sitewide/NavBar'
-//import Countdown from '../components/Countdown'
 import Banner from '../containers/Banner'
 import './cssPages/HomePage.css'
-import LeftContainer from '../containers/LeftContainer';
+import ChallengeDashboard from '../components/challenge/ChallengeDashboard';
 
 function HomePage(){
     const isLoggedIn = useSelector (state => !!state.auth.id);
@@ -22,7 +21,9 @@ function HomePage(){
                <div className="mainContent-float">
                    <Banner></Banner>
                      <div className="challenge2020">
-                         <div className="leftContainer"></div>
+                         <div className="leftContainer">
+                             <ChallengeDashboard/>
+                         </div>
                      </div>
                      <div className="rightContainer"></div>
                 </div>
