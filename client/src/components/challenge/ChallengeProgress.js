@@ -11,7 +11,7 @@ const ChallengeProgress = () =>{
                 <div className="challengeProgressBarHeader">
                     <div className="challengeProgressMessage">
                         You have read X of X books. <br />
-                         <div className="editChallengeAction">Edit</div>
+                         {/* <div className="editChallengeAction">Edit</div> */}
                     </div>
                 </div>
                 <div className="challengeProgressBar">
